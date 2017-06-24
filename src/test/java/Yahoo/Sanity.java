@@ -32,8 +32,10 @@ public class Sanity extends Driverclass {
 			driver = new ChromeDriver();
 		}
 		// Testing the Login Screen
-		login l = new login();
-		l.LoginValidation();
+		// login l = new login();
+		// l.LoginValidation();
+		Registration Regi = new Registration();
+		Regi.openAccount();
 
 	}
 

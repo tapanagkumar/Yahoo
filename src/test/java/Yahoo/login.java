@@ -8,26 +8,25 @@ import org.apache.poi.ss.usermodel.Row;
 import org.openqa.selenium.By;
 
 public class login extends Driverclass {
-	
-	public void launchWebsite() throws Exception {
-		
-		driver.manage().window().maximize();
-		driver.get(Configfile.Param.getProperty("URL"));
-	}
+
+	Configfile conff = new Configfile();
 
 	@SuppressWarnings({ "static-access", "deprecation" })
 	public void LoginValidation() throws Exception {
-		
-		/*// Read the login details from excel sheet stored in resources folder
 
-		// file for reading the user name and password
-		FileInputStream fin = new FileInputStream(
-				"C:\\Users\\Gowri\\workspace\\Yahoo\\src\\test\\resources\\data.xlsx");
-
-		XSSFWorkbook wb = new XSSFWorkbook(fin);*/
+		/*
+		 * // Read the login details from excel sheet stored in resources folder
+		 * 
+		 * // file for reading the user name and password FileInputStream fin =
+		 * new FileInputStream(
+		 * "C:\\Users\\Gowri\\workspace\\Yahoo\\src\\test\\resources\\data.xlsx"
+		 * );
+		 * 
+		 * XSSFWorkbook wb = new XSSFWorkbook(fin);
+		 */
 		// Get sheet in workbook
-		
-		//XSSFSheet ws = wb.getSheet("Sheet2");
+
+		// XSSFSheet ws = wb.getSheet("Sheet2");
 		Row row;
 		Cell cell;
 		// for all the rows in work sheet
@@ -37,7 +36,7 @@ public class login extends Driverclass {
 			row = Configfile.ws.getRow(r); // each row
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			// Launch the website undertest
-			launchWebsite();
+			conff.launchWebsite();
 			// Read username from cell 0 and put in the username field
 			Thread.sleep(3000);
 			cell = row.getCell(0, row.RETURN_BLANK_AS_NULL);
@@ -55,7 +54,8 @@ public class login extends Driverclass {
 			if (cell == null)
 				driver.findElement(By.id(Configfile.Param.getProperty("login.username.password"))).sendKeys("");
 			else
-				driver.findElement(By.id(Configfile.Param.getProperty("login.username.password"))).sendKeys(new String(decodedBytes));
+				driver.findElement(By.id(Configfile.Param.getProperty("login.username.password")))
+						.sendKeys(new String(decodedBytes));
 
 			driver.findElement(By.id(Configfile.Param.getProperty("login.username.signin"))).click();
 
