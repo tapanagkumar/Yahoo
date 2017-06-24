@@ -7,13 +7,20 @@ import java.util.Properties;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Configfile {
+public class Configfile extends Driverclass{
 
 	public static Properties Param;
 	public static XSSFWorkbook wb;
 	public static XSSFSheet ws;
+	public static XSSFSheet ws1;
 	public static FileInputStream fin;
 	public static FileOutputStream fout;
+	
+	public void launchWebsite() throws Exception {
+		
+		driver.manage().window().maximize();
+		driver.get(Configfile.Param.getProperty("URL"));
+	}
 	
 	public void objrepo() throws Exception {
 		FileInputStream fis = new FileInputStream("C:\\Users\\Gowri\\workspace\\Yahoo\\Yahoo\\src\\test\\java\\Object_Repo.properties");
@@ -34,6 +41,7 @@ public class Configfile {
 						"C:\\Users\\Gowri\\workspace\\Yahoo\\Yahoo\\src\\test\\resources\\data.xlsx");
 				 wb = new XSSFWorkbook(fin);
 				 ws = wb.getSheet("LoginDetails");
+				 ws1=wb.getSheet("Registration");
 
 				
 		
