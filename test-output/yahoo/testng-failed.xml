@@ -7,7 +7,7 @@
     <classes>
       <class name="Yahoo.Sanity">
         <methods>
-          <include name="sanitytesting"/>
+          <include name="sanitytesting" invocation-numbers="0"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- Yahoo.Sanity -->
