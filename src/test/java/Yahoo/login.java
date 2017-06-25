@@ -14,19 +14,6 @@ public class login extends Driverclass {
 	@SuppressWarnings({ "static-access", "deprecation" })
 	public void LoginValidation() throws Exception {
 
-		/*
-		 * // Read the login details from excel sheet stored in resources folder
-		 * 
-		 * // file for reading the user name and password FileInputStream fin =
-		 * new FileInputStream(
-		 * "C:\\Users\\Gowri\\workspace\\Yahoo\\src\\test\\resources\\data.xlsx"
-		 * );
-		 * 
-		 * XSSFWorkbook wb = new XSSFWorkbook(fin);
-		 */
-		// Get sheet in workbook
-
-		// XSSFSheet ws = wb.getSheet("Sheet2");
 		Row row;
 		Cell cell;
 		// for all the rows in work sheet

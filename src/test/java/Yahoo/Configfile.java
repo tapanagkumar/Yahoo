@@ -23,7 +23,7 @@ public class Configfile extends Driverclass{
 		driver.manage().window().maximize();
 		driver.get(Configfile.Param.getProperty("URL"));
 	}
-	
+	//Read from Properties file
 	public void objrepo() throws Exception {
 		FileInputStream fis = new FileInputStream("C:\\Users\\Gowri\\workspace\\Yahoo\\Yahoo\\src\\test\\java\\Object_Repo.properties");
 		// Create Properties class object to read properties file
