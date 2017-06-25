@@ -7,17 +7,21 @@ import org.openqa.selenium.By;
 
 public class Registration extends Driverclass {
 	Configfile conff = new Configfile();
-
+	Row row;
+	
+	
 	public void openAccount() throws Exception {
-
-		Row row;
-
+		
 		// for all the rows in work sheet
 		for (int r = 0; r <= Configfile.ws1.getLastRowNum(); r++) {
-			row = Configfile.ws.getRow(r); // each row
+			// Read Each row
+			row = Configfile.ws1.getRow(r); 
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			conff.launchWebsite();
 			driver.findElement(By.id(Configfile.Param.getProperty("CreateAccount"))).click();
+			driver.findElement(By.xpath(Configfile.Param.getProperty("SignUpText"))).isDisplayed();
+			driver.findElement(By.id(Configfile.Param.getProperty("FirstName"))).sendKeys(row.getCell(0).getStringCellValue());
+			driver.findElement(By.id(Configfile.Param.getProperty("LastName"))).sendKeys(row.getCell(1).getStringCellValue());
 
 		}
 	}

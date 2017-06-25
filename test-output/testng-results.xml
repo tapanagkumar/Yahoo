@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="yahoo" duration-ms="10420" started-at="2017-06-24T11:38:55Z" finished-at="2017-06-24T11:39:05Z">
+  <suite name="yahoo" duration-ms="9214" started-at="2017-06-25T04:16:56Z" finished-at="2017-06-25T04:17:05Z">
     <groups>
     </groups>
-    <test name="tst_retest_chrome" duration-ms="10420" started-at="2017-06-24T11:38:55Z" finished-at="2017-06-24T11:39:05Z">
+    <test name="tst_retest_chrome" duration-ms="9214" started-at="2017-06-25T04:16:56Z" finished-at="2017-06-25T04:17:05Z">
       <class name="Yahoo.Sanity">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Yahoo.Sanity@61832929]" name="beforeTest" is-config="true" duration-ms="686" started-at="2017-06-24T17:08:55Z" finished-at="2017-06-24T17:08:56Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Yahoo.Sanity@61832929]" name="beforeTest" is-config="true" duration-ms="670" started-at="2017-06-25T09:46:56Z" finished-at="2017-06-25T09:46:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="sanitytesting(java.lang.String)[pri:0, instance:Yahoo.Sanity@61832929]" name="sanitytesting" duration-ms="9734" started-at="2017-06-24T17:08:56Z" finished-at="2017-06-24T17:09:05Z">
+        <test-method status="PASS" signature="sanitytesting(java.lang.String)[pri:0, instance:Yahoo.Sanity@61832929]" name="sanitytesting" duration-ms="8526" started-at="2017-06-25T09:46:57Z" finished-at="2017-06-25T09:47:05Z">
           <params>
             <param index="0">
               <value>
