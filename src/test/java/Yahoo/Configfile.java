@@ -4,8 +4,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Properties;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -33,6 +31,7 @@ public class Configfile extends Driverclass{
 		System.out.println("Property class loaded");
 		// Select workbook in the file
 	}
+	
 	//Read from Excel
 	public void ReadFromExcel() throws Exception
 	{
