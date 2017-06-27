@@ -22,8 +22,12 @@ public class Registration extends Driverclass {
 			driver.findElement(By.xpath(Configfile.Param.getProperty("SignUpText"))).isDisplayed();
 			driver.findElement(By.id(Configfile.Param.getProperty("FirstName"))).sendKeys(row.getCell(0).getStringCellValue());
 			driver.findElement(By.id(Configfile.Param.getProperty("LastName"))).sendKeys(row.getCell(1).getStringCellValue());
-
+			driver.findElement(By.id(Configfile.Param.getProperty("UserName"))).sendKeys(row.getCell(2).getStringCellValue());
+			driver.findElement(By.id(Configfile.Param.getProperty("Password"))).sendKeys(row.getCell(3).getStringCellValue());
+			Configfile.DropDownSelection(".//*[@id='regform']/div[3]/div[2]/div/select");
+			Configfile.mySelect.selectByIndex(95);
 		}
+		
 	}
 
 }

@@ -2,10 +2,14 @@ package Yahoo;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class Configfile extends Driverclass{
 
@@ -15,6 +19,7 @@ public class Configfile extends Driverclass{
 	public static XSSFSheet ws1;
 	public static FileInputStream fin;
 	public static FileOutputStream fout;
+	public static Select mySelect; 
 	
 	public void launchWebsite() throws Exception {
 		
@@ -53,6 +58,19 @@ public class Configfile extends Driverclass{
 		fout = new FileOutputStream(
 				"C:\\Users\\Gowri\\workspace\\Yahoo\\Yahoo\\src\\test\\resources\\data.xlsx");
 		Configfile.wb.write(fout);
+	}
+	
+	//Select DropDown Menu
+	public static void DropDownSelection(String locator )
+	{
+		WebElement mySelectElm = driver.findElement(By.xpath(locator)); 
+		mySelect = new Select(mySelectElm);
+		List<WebElement> list = mySelect.getOptions();
+		for(int i=0;i<list.size();i++)          
+		    {
+		        System.out.println(list.get(i).getText());
+		    }
+		
 	}
 	}
 
